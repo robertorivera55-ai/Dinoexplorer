@@ -1,50 +1,15 @@
 package logic;
 
 public abstract class Dinosaurio {
-    protected String nombre;
+    protected String nombreCientifico;
     protected String periodo;
     protected double peso;
 
     public Dinosaurio(String nombre, String periodo, double peso) {
-        this.nombre = nombre;
+        this.nombreCientifico = nombre;
         this.periodo = periodo;
         this.peso = peso;
     }
 
-    public abstract String getFichaTecnica(); // Método abstracto (Polimorfismo)
-
-    public String getNombre() { return nombre; }
-}
-package logic;
-
-public class Carnivoro extends Dinosaurio {
-    private double longitudDientes;
-
-    public Carnivoro(String nombre, String periodo, double peso, double longitudDientes) {
-        super(nombre, periodo, peso);
-        this.longitudDientes = longitudDientes;
-    }
-
-    @Override
-    public String getFichaTecnica() {
-        return "TIPO: Carnívoro | Nombre: " + nombre + " | Periodo: " + periodo + 
-               " | Dientes: " + longitudDientes + "cm";
-    }
-}
-package logic;
-
-public class Usuario {
-    private String nombre;
-    private String tipo; // Administrador o Jugador
-    private int progreso;
-
-    public Usuario(String nombre, String tipo) {
-        this.nombre = nombre;
-        this.tipo = tipo;
-        this.progreso = 0;
-    }
-
-    public void mostrarInfo() {
-        System.out.println("Usuario: " + nombre + " | Rol: " + tipo + " | Progreso: " + progreso + "%");
-    }
+    public abstract String getFichaTecnica(); // Polimorfismo
 }
