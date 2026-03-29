@@ -24,3 +24,12 @@ public class Main {
         System.out.println("\n¡Exploración finalizada con éxito!");
     }
 }
+package ui;
+import logic.*; // Esto conecta con la otra carpeta
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("--- DINO-EXPLORER INICIADO ---");
+        // Aquí va la lógica de inicio del juego
+    }
+}
