@@ -15,3 +15,36 @@ public abstract class Dinosaurio {
 
     public String getNombre() { return nombre; }
 }
+package logic;
+
+public class Carnivoro extends Dinosaurio {
+    private double longitudDientes;
+
+    public Carnivoro(String nombre, String periodo, double peso, double longitudDientes) {
+        super(nombre, periodo, peso);
+        this.longitudDientes = longitudDientes;
+    }
+
+    @Override
+    public String getFichaTecnica() {
+        return "TIPO: Carnívoro | Nombre: " + nombre + " | Periodo: " + periodo + 
+               " | Dientes: " + longitudDientes + "cm";
+    }
+}
+package logic;
+
+public class Usuario {
+    private String nombre;
+    private String tipo; // Administrador o Jugador
+    private int progreso;
+
+    public Usuario(String nombre, String tipo) {
+        this.nombre = nombre;
+        this.tipo = tipo;
+        this.progreso = 0;
+    }
+
+    public void mostrarInfo() {
+        System.out.println("Usuario: " + nombre + " | Rol: " + tipo + " | Progreso: " + progreso + "%");
+    }
+}
