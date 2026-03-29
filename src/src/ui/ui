@@ -1,0 +1,26 @@
+package ui;
+
+import logic.*; // Importa las clases de la carpeta logic
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("--- BIENVENIDO A DINO-EXPLORER ---");
+
+        // 1. Crear Usuario
+        Usuario jugador = new Usuario("Jose Roberto", "Jugador");
+        jugador.mostrarInfo();
+
+        // 2. Crear lista de dinosaurios (Polimorfismo)
+        ArrayList<Dinosaurio> museo = new ArrayList<>();
+        museo.add(new Carnivoro("T-Rex", "Cretácico", 8000.0, 30.5));
+        
+        // 3. Mostrar datos
+        System.out.println("\nEspecies descubiertas:");
+        for (Dinosaurio d : museo) {
+            System.out.println(d.getFichaTecnica());
+        }
+        
+        System.out.println("\n¡Exploración finalizada con éxito!");
+    }
+}
